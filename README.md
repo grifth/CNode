@@ -1,4 +1,4 @@
-# c
+# CN
 
 > A Vue.js project
 
