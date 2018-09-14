@@ -1,4 +1,4 @@
-# CN
+# CNode
 
 > A Vue.js project
 
