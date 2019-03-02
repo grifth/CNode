@@ -1,15 +1,35 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import header from '@/components/header'
+import article from '@/components/article'
+import postlist from '@/components/postlist'
+import userinfo from '@/components/userinfo'
+import slidebar from '@/components/slidebar'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'header',
-    //   component: header
-    // }
+    {
+      name: 'root',
+      path: '/',
+      components: {
+        main:postlist
+      }
+    },
+    {
+      name: 'post_content',
+      path: '/topic/:id&author=:name',
+      components: {
+        main:article,
+        slidebar:slidebar
+      }
+    },
+    {
+      name: 'user_info',
+      path: '/userinfo/:name',
+      components: {
+        main:userinfo
+      }
+    },
   ]
 })
